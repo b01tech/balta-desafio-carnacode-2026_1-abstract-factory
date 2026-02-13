@@ -1,3 +1,4 @@
+/*
 // DESAFIO: Sistema de Pagamentos Multi-Gateway
 // PROBLEMA: Uma plataforma de e-commerce precisa integrar com múltiplos gateways de pagamento
 // (PagSeguro, MercadoPago, Stripe) e cada gateway tem componentes específicos (Processador, Validador, Logger)
@@ -9,7 +10,7 @@ namespace DesignPatternChallenge
 {
     // Contexto: Sistema de pagamentos que precisa trabalhar com diferentes gateways
     // Cada gateway tem sua própria forma de processar, validar e logar transações
-    
+
     public class PaymentService
     {
         private readonly string _gateway;
@@ -32,10 +33,10 @@ namespace DesignPatternChallenge
                         Console.WriteLine("PagSeguro: Cartão inválido");
                         return;
                     }
-                    
+
                     var pagSeguroProcessor = new PagSeguroProcessor();
                     var pagSeguroResult = pagSeguroProcessor.ProcessTransaction(amount, cardNumber);
-                    
+
                     var pagSeguroLogger = new PagSeguroLogger();
                     pagSeguroLogger.Log($"Transação processada: {pagSeguroResult}");
                     break;
@@ -47,10 +48,10 @@ namespace DesignPatternChallenge
                         Console.WriteLine("MercadoPago: Cartão inválido");
                         return;
                     }
-                    
+
                     var mercadoPagoProcessor = new MercadoPagoProcessor();
                     var mercadoPagoResult = mercadoPagoProcessor.ProcessTransaction(amount, cardNumber);
-                    
+
                     var mercadoPagoLogger = new MercadoPagoLogger();
                     mercadoPagoLogger.Log($"Transação processada: {mercadoPagoResult}");
                     break;
@@ -62,10 +63,10 @@ namespace DesignPatternChallenge
                         Console.WriteLine("Stripe: Cartão inválido");
                         return;
                     }
-                    
+
                     var stripeProcessor = new StripeProcessor();
                     var stripeResult = stripeProcessor.ProcessTransaction(amount, cardNumber);
-                    
+
                     var stripeLogger = new StripeLogger();
                     stripeLogger.Log($"Transação processada: {stripeResult}");
                     break;
@@ -79,7 +80,7 @@ namespace DesignPatternChallenge
     // Componentes do PagSeguro
     public class PagSeguroValidator
     {
-        public bool ValidateCard(string cardNumber) 
+        public bool ValidateCard(string cardNumber)
         {
             Console.WriteLine("PagSeguro: Validando cartão...");
             return cardNumber.Length == 16;
@@ -182,3 +183,4 @@ namespace DesignPatternChallenge
         }
     }
 }
+*/
