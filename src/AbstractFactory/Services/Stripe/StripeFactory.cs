@@ -1,8 +1,8 @@
-using src.services.interfaces;
+using AbstractFactory.Services.Interfaces;
 
-namespace src.services.Stripe;
+namespace AbstractFactory.Services.Stripe;
 
-internal class StripeFactory : IPaymentFactory
+internal class StripeFactory : IPaymentGatewayFactory
 {
     public IPaymentProcessor CreatePaymentProcessor() => new StripeProcessor();
     public IPaymentValidator CreatePaymentValidator() => new StripeValidator();

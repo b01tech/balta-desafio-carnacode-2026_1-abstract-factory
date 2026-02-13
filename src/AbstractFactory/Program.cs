@@ -1,9 +1,9 @@
-// Solução: Usando Abstract Factory para criar gateways de pagamento
+﻿// Solução: Usando Abstract Factory para criar gateways de pagamento
 using System;
-using src.services;
-using src.services.PagSeguro;
-using src.services.MercadoPago;
-using src.services.Stripe;
+using AbstractFactory.Services;
+using AbstractFactory.Services.MercadoPago;
+using AbstractFactory.Services.PagSeguro;
+using AbstractFactory.Services.Stripe;
 
 namespace DesignPatternChallenge
 {

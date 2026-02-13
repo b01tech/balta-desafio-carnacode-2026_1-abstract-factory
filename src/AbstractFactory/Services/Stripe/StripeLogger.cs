@@ -1,6 +1,6 @@
-using src.services.interfaces;
+using AbstractFactory.Services.Interfaces;
 
-namespace src.services.Stripe;
+namespace AbstractFactory.Services.Stripe;
 
 internal class StripeLogger : IPaymentLogger
 {

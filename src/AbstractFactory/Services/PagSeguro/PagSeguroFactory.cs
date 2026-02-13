@@ -1,10 +1,11 @@
-using src.services.interfaces;
+using AbstractFactory.Services.Interfaces;
 
-namespace src.services.PagSeguro;
+namespace AbstractFactory.Services.PagSeguro;
 
-internal class PagSeguroFactory : IPaymentFactory
+internal class PagSeguroFactory : IPaymentGatewayFactory
 {
     public IPaymentProcessor CreatePaymentProcessor() => new PagSeguroProcessor();
     public IPaymentValidator CreatePaymentValidator() => new PagSeguroValidator();
     public IPaymentLogger CreatePaymentLogger() => new PagSeguroLogger();
 }
+

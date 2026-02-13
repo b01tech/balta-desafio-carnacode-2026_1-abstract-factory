@@ -1,10 +1,10 @@
-using src.services.interfaces;
+using AbstractFactory.Services.Interfaces;
 
-namespace src.services.PagSeguro;
+namespace AbstractFactory.Services.PagSeguro;
 
 internal class PagSeguroValidator : IPaymentValidator
 {
-    public bool ValidatePayment(string cardNumber)
+    public bool ValidateCard(string cardNumber)
     {
         if (cardNumber.Length == 16)
         {

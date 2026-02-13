@@ -1,6 +1,6 @@
-using src.services.interfaces;
+using AbstractFactory.Services.Interfaces;
 
-namespace src.services.PagSeguro;
+namespace AbstractFactory.Services.PagSeguro;
 
 internal class PagSeguroLogger : IPaymentLogger
 {

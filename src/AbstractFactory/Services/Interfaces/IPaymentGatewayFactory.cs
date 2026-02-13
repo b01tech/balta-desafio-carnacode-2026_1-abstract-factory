@@ -1,4 +1,4 @@
-namespace src.services.interfaces;
+namespace AbstractFactory.Services.Interfaces;
 
 public interface IPaymentGatewayFactory
 {

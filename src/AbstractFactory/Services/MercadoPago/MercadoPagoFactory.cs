@@ -1,8 +1,8 @@
-using src.services.interfaces;
+using AbstractFactory.Services.Interfaces;
 
-namespace src.services.MercadoPago;
+namespace AbstractFactory.Services.MercadoPago;
 
-internal class MercadoPagoFactory : IPaymentFactory
+internal class MercadoPagoFactory : IPaymentGatewayFactory
 {
     public IPaymentProcessor CreatePaymentProcessor() => new MercadoPagoProcessor();
     public IPaymentValidator CreatePaymentValidator() => new MercadoPagoValidator();

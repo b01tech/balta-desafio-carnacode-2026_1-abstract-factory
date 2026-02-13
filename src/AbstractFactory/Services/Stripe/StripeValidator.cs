@@ -1,10 +1,10 @@
-using src.services.interfaces;
+using AbstractFactory.Services.Interfaces;
 
-namespace src.services.Stripe;
+namespace AbstractFactory.Services.Stripe;
 
 internal class StripeValidator : IPaymentValidator
 {
-    public bool ValidatePayment(string cardNumber)
+    public bool ValidateCard(string cardNumber)
     {
         if (cardNumber.Length == 16 && cardNumber.StartsWith("4"))
         {

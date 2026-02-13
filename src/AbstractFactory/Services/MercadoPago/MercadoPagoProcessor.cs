@@ -1,6 +1,6 @@
-using src.services.interfaces;
+using AbstractFactory.Services.Interfaces;
 
-namespace src.services.MercadoPago;
+namespace AbstractFactory.Services.MercadoPago;
 
 internal class MercadoPagoProcessor : IPaymentProcessor
 {
