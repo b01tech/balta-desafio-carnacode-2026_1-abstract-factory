@@ -30,6 +30,14 @@ A solução foi implementada utilizando o padrão **Abstract Factory**, garantin
 - **Visibilidade**: Interfaces foram definidas como `public` para exposição do contrato, enquanto as implementações concretas foram mantidas como `internal`, encapsulando a complexidade e seguindo boas práticas de design.
 - **Modernização**: Atualização da geração de IDs para utilizar `Guid.CreateVersion7()`.
 
+### Exemplo de Uso
+
+```csharp
+var mercadoPagoFactory = new MercadoPagoFactory();
+var mercadoPagoService = new PaymentService(mercadoPagoFactory);
+mercadoPagoService.ProcessPayment(amount, cardNumber);
+```
+
 ## Sobre o CarnaCode 2026
 
 O desafio **CarnaCode 2026** consiste em implementar todos os 23 padrões de projeto (Design Patterns) em cenários reais. Durante os 23 desafios desta jornada, os participantes são submetidos ao aprendizado e prática na idetinficação de códigos não escaláveis e na solução de problemas utilizando padrões de mercado.
